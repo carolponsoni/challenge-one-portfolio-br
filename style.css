@@ -1,0 +1,283 @@
+/* Fonte personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cores principais */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --header-background: #343a40;
+    --header-text-color: #ffffff;
+    --footer-background: #343a40;
+    --footer-text-color: #ffffff;
+}
+
+/* Estilos do cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--header-background);
+    color: var(--header-text-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--header-text-color);
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Estilos da seção de introdução */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: var(--background-color);
+    flex-wrap: wrap;
+}
+
+.intro-text {
+    max-width: 50%;
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 20px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: darken(var(--primary-color), 10%);
+}
+
+.social-links a::after {
+    content: " ↗";
+    color: var(--secondary-color);
+}
+
+.intro-image img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos das seções */
+.sobre, .formacao, .contato, .projetos {
+    background-color: #eef4ff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.sobre h2, .skills h2, .hobbies h2, .formacao h2, .contato h2, .projetos h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.sobre p, .formacao p, .contato p {
+    max-width: 800px;
+    margin: 20px auto;
+    color: #666;
+    line-height: 1.8;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.sobre img, .formacao img, .contato img {
+    margin-top: 30px;
+    width: 150px;
+}
+
+/* Estilos da seção de skills e hobbies */
+.skills, .hobbies {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.skills-container, .hobbies-container, .formacao-container, .projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-item, .hobby-item, .formacao-item, {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 560px;
+    transition: transform 0.3s;
+}
+
+.projeto-item {
+	background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 560px;
+    transition: transform 0.3s;
+}
+
+.skill-item:hover, .hobby-item:hover, .formacao-item:hover, .projeto-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item img, .hobby-item img, .formacao-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.formacao-item p {
+    margin: 10px 0 0;
+}
+
+.skill-item iframe,{
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+}
+
+/* Estilos do formulário de contato */
+.contato-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contato-image img {
+    max-width: 400px;
+    width: 100%;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+#contact-form label {
+    font-weight: bold;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+footer {
+    background: var(--footer-background);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .intro-text, .intro-image {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .intro {
+        flex-direction: column;
+    }
+
+    .skills-container, .hobbies-container, .formacao-container, .projetos-container {
+        flex-direction: column;
+    }
+
+    .skill-item, .hobby-item, .formacao-item, .projeto-item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contato-container {
+        flex-direction: column;
+    }
+}
